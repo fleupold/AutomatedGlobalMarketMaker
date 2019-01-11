@@ -16,6 +16,11 @@
 		0875917D21D52A8B008AD8F1 /* MarginalPriceCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875917C21D52A8B008AD8F1 /* MarginalPriceCalculation.swift */; };
 		0875917F21D52BFB008AD8F1 /* MarginalPriceCalculationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875917E21D52BFB008AD8F1 /* MarginalPriceCalculationTest.swift */; };
 		0875918021D52E0F008AD8F1 /* MarginalPriceCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875917C21D52A8B008AD8F1 /* MarginalPriceCalculation.swift */; };
+		0875918221D6254E008AD8F1 /* GraphBasedOutcomeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875918121D6254E008AD8F1 /* GraphBasedOutcomeCounter.swift */; };
+		0875918421D625CB008AD8F1 /* GraphBasedOutcomeCounterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875918321D625CB008AD8F1 /* GraphBasedOutcomeCounterTest.swift */; };
+		0875918521D625FA008AD8F1 /* GraphBasedOutcomeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875918121D6254E008AD8F1 /* GraphBasedOutcomeCounter.swift */; };
+		0875918721D63935008AD8F1 /* OutcomeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875918621D63935008AD8F1 /* OutcomeArray.swift */; };
+		0875918821D63A31008AD8F1 /* OutcomeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875918621D63935008AD8F1 /* OutcomeArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +44,9 @@
 		0875917521D51713008AD8F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0875917C21D52A8B008AD8F1 /* MarginalPriceCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginalPriceCalculation.swift; sourceTree = "<group>"; };
 		0875917E21D52BFB008AD8F1 /* MarginalPriceCalculationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginalPriceCalculationTest.swift; sourceTree = "<group>"; };
+		0875918121D6254E008AD8F1 /* GraphBasedOutcomeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphBasedOutcomeCounter.swift; sourceTree = "<group>"; };
+		0875918321D625CB008AD8F1 /* GraphBasedOutcomeCounterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphBasedOutcomeCounterTest.swift; sourceTree = "<group>"; };
+		0875918621D63935008AD8F1 /* OutcomeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeArray.swift; sourceTree = "<group>"; };
 		08BBA31F21D50AFD005A0E5D /* NaiveOutcomeCounterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaiveOutcomeCounterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +75,8 @@
 				0825EAA621D510D500C26BB8 /* OutcomeCounting.swift */,
 				0871220121D50E1A00B677B0 /* main.swift */,
 				0875917C21D52A8B008AD8F1 /* MarginalPriceCalculation.swift */,
+				0875918121D6254E008AD8F1 /* GraphBasedOutcomeCounter.swift */,
+				0875918621D63935008AD8F1 /* OutcomeArray.swift */,
 			);
 			path = GlobalAutomatedMarketMaker;
 			sourceTree = "<group>";
@@ -74,6 +84,7 @@
 		0875917221D51713008AD8F1 /* GlobalAutomatedMarketMakerUnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				0875918321D625CB008AD8F1 /* GraphBasedOutcomeCounterTest.swift */,
 				08BBA31F21D50AFD005A0E5D /* NaiveOutcomeCounterTest.swift */,
 				0875917521D51713008AD8F1 /* Info.plist */,
 				0875917E21D52BFB008AD8F1 /* MarginalPriceCalculationTest.swift */,
@@ -178,7 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0875918221D6254E008AD8F1 /* GraphBasedOutcomeCounter.swift in Sources */,
 				0825EAA521D510D100C26BB8 /* NaiveOutcomeCounter.swift in Sources */,
+				0875918721D63935008AD8F1 /* OutcomeArray.swift in Sources */,
 				0871220221D50E1A00B677B0 /* main.swift in Sources */,
 				0875917D21D52A8B008AD8F1 /* MarginalPriceCalculation.swift in Sources */,
 				0825EAA721D510D500C26BB8 /* OutcomeCounting.swift in Sources */,
@@ -189,10 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0875918821D63A31008AD8F1 /* OutcomeArray.swift in Sources */,
+				0875918521D625FA008AD8F1 /* GraphBasedOutcomeCounter.swift in Sources */,
 				0875918021D52E0F008AD8F1 /* MarginalPriceCalculation.swift in Sources */,
 				0875917921D5179B008AD8F1 /* NaiveOutcomeCounter.swift in Sources */,
 				0875917A21D5179B008AD8F1 /* OutcomeCounting.swift in Sources */,
 				0875917F21D52BFB008AD8F1 /* MarginalPriceCalculationTest.swift in Sources */,
+				0875918421D625CB008AD8F1 /* GraphBasedOutcomeCounterTest.swift in Sources */,
 				0875917B21D5179B008AD8F1 /* NaiveOutcomeCounterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

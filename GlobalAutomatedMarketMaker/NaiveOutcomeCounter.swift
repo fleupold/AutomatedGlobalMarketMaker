@@ -44,23 +44,11 @@ class NaiveOutcomeCounter: OutcomeCounting, ConciseOutcomeCounting {
     }
     
     func conciseOutcomeCount(combination: [Outcome]) -> ConciseOutcomeCount {
-        let variableIndices = Set(combination.enumerated().filter {
-            switch $1 {
-            case Outcome.Fixed:
-                return false;
-            case Outcome.Variable:
-                return true;
-            }
-        }.map {$0.offset})
         let outcomeCount = self.outcomeCount(combination: combination);
         let scalingFactor = outcomeCount.pro.count;
         var result = ConciseOutcomeCount();
         result.pro = outcomeCount.pro.map{$1}.reduce(0, +) / scalingFactor
-        outcomeCount.contra.forEach{
-            let sub = String($0.enumerated().map{ variableIndices.contains($0) ? "x" : $1 });
-            result.contra[sub] = result.contra[sub, default: 0] + $1
-        }
-        result.contra = Dictionary(uniqueKeysWithValues: result.contra.map{ (key, value) in (key, value/scalingFactor) })
+        result.contra = outcomeCount.contra.map{$1}.reduce(0, +) / scalingFactor
         return result;
     }
 }

@@ -39,22 +39,22 @@ class NaiveOutcomeCounterTest: XCTestCase {
         let combinationA = [Outcome.Fixed(false), Outcome.Fixed(true), Outcome.Variable, Outcome.Variable]
         var result = priceCalculator.conciseOutcomeCount(combination: combinationA)
         XCTAssert(result.pro == 0)
-        XCTAssert(Array(result.contra.values) == Array(repeating: 0, count: 3) )
+        XCTAssert(result.contra == 0)
         
         priceCalculator.buy(combination: combinationA, amount: 10)
         result = priceCalculator.conciseOutcomeCount(combination: combinationA)
         XCTAssert(result.pro == 10 )
-        XCTAssert(Array(result.contra.values) == Array(repeating: 0, count: 3) )
+        XCTAssert(result.contra == 0)
         
         let combinationB = [Outcome.Fixed(false), Outcome.Variable, Outcome.Fixed(true), Outcome.Variable]
         result = priceCalculator.conciseOutcomeCount(combination: combinationB)
         XCTAssert(result.pro == 5 )
-        XCTAssert(result.contra == ["1x1x": 0, "1x0x": 0, "0x0x": 5])
+        XCTAssert(result.contra == 5)
         
         priceCalculator.buy(combination: combinationB, amount: 5)
         result = priceCalculator.conciseOutcomeCount(combination: combinationB)
         XCTAssert(result.pro == 10 )
-        XCTAssert(result.contra == ["1x1x": 0, "1x0x": 0, "0x0x": 5])
+        XCTAssert(result.contra == 5)
     }
 
     func testPerformanceExample() {
